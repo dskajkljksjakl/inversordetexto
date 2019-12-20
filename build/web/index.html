@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<style type="text/css">
+    .botaoEnviar{
+    width: 173px;
+    max-width: 330px;
+    border: 0px solid  ;
+    text-align: center;
+    padding: 10px 8px;
+    border-radius: 2px;
+    background-color:#333333;
+    font-size: 15px;
+    color: #E8E8E8;
+</style>
+<style type="text/css">
+  textarea {width: 40%;}
+</style>
+<h1>Inversor de Textos!</h1>
+<h4>Digite um Texto:</h4>
+<form action="computador" method="POST">
+  <textarea name= "textData"  rows="7"></textarea>
+   <div id="botao">
+       
+  <input  class="botaoEnviar"  name= "newTextData" type="submit"  value="Enviar" onclick="reverseText()"/> <input type="reset" value="Apagar" />
+ 
+      
+</form>
+
+<script type="text/javascript" language="JavaScript" >
+function reverseText() {
+    document.all.newTextData.value="";
+    for(count=document.all.textData.value.length;count>=0; count--)
+    document.all.newTextData.value += document.all.textData.value.substring(count,count-1);
+}
+</script>
+
+</body>
+</html>
